@@ -3,12 +3,12 @@ class Solution:
         l,r,t,b = 0, n - 1, 0 ,n - 1
         mat = [[ 0 for _ in range(n)] for _ in range(n)]
         num, tar = 1, n * n
-        while num < tar:
-            for i in range(1, r+1):
+        while num <= tar:
+            for i in range(l, r + 1):
                 mat[t][i] = num
                 num += 1
             t += 1
-            for i in range(t, b+1):
+            for i in range(t, b + 1):
                 mat[i][r] = num
                 num += 1
             r -= 1
@@ -21,3 +21,13 @@ class Solution:
                 num += 1
             l += 1
         return mat
+
+
+    def __init__(self):
+        a = self.generateMatrix(3)
+        print(a)
+
+if __name__ == "__main__":
+    Solution()
+
+
