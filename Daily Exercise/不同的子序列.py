@@ -2,7 +2,6 @@ class Solution:
     def numDistinct(self, s:str, t:str) -> int:
         n, m = len(s), len(t)
         dp = [[0] * (n + 1) for _ in range(m + 1)]
-        print(dp)
 
         for i in range(n + 1):
             dp[0][i] = 1
