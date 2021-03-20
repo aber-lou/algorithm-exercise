@@ -32,3 +32,6 @@ class Solution:
         pre.next = right_node
         left_node.next = curr
         return dummy_node.next
+
+
+        
