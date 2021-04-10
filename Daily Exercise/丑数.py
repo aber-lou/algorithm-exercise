@@ -1,4 +1,18 @@
 class Solution:
+
+    def isUgly3(self,n:int) -> int:
+        sum = [1]
+
+        ugly = 2
+        while len(sum) < n:
+            if self.isUgly2(ugly):
+                sum.append(ugly)
+            ugly += 1
+        
+        if len(sum) == n:
+            return sum[len(sum) - 1]
+
+
     def isUgly(self,n:int) -> bool:
 
         if n <= 0:
@@ -25,8 +39,17 @@ class Solution:
         for d in divide:
             while n % d == 0:
                 n /= d
-        
+                
         return n == 1
+
+    def __init__(self):
+       a =  self.isUgly3(350)
+       print(a)
+
+
+if __name__ == "__main__":
+    s = Solution()
+
 
 
         
