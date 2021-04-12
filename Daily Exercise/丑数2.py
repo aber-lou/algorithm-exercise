@@ -43,8 +43,6 @@ class Solution:
         
     def __init__(self, n: int):
         num = self.nthUglyNumberHeap(n)
-        print(num)
-
 
 if __name__ == "__main__":
     solution = Solution(10)
