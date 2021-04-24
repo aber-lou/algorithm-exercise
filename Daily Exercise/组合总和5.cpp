@@ -1,13 +1,15 @@
 class Solution {
 public:
     int combinationSum4(vector<int>& nums, int target) {
-        vector<int> dp(target+1,0);
+        vector<int> dp(target + 1);
         dp[0] = 1;
         for (int i = 1; i  <= target; i++) {
-            for(auto a :nums) {
-                dp[i] += dp[i-a];
+            for (int& num : nums) {
+                if (num <= i && dp[i - num] < INT_MAX - dp[i]) {
+                    dp[i] += dp[i - num];
+                }
             }
         }
-        return dp.back();
+        return dp[target];
     }
 };
