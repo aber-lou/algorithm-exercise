@@ -7,7 +7,7 @@ def maxSatisfied(self, customers, grumpy,X):
             sumSat += customers[i]
     
     for j in range(X):
-        if grumpy[j] = 1:
+        if grumpy[j] == 1:
             sumWindow += customers[j]
 
     maxWindow = sumWindow
