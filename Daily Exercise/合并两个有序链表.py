@@ -33,3 +33,9 @@ class Solution:
         else:
             l2.next = self.mergeTwoListPlanB(self,l1,l2.next)
             
+    def __init__(self) -> None:
+        self.mergeTwoListPlanB()
+
+
+if __name__ == "__main__":
+    s = Solution()
