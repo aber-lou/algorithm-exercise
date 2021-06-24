@@ -38,6 +38,7 @@ class Solution:
             
     def __init__(self) -> None:
         self.mergeTwoListPlanB()
+        self.mergeTwoLists()
 
 
 if __name__ == "__main__":
