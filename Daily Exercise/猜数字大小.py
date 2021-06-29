@@ -13,3 +13,6 @@ class Solution:
                 left = mid + 1
         
         return left
+
+    def __init__(self):
+        guessNumber(5)
