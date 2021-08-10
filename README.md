@@ -1,2 +1,2 @@
 # algorithm-exercise
-LeetCode每日练习 &amp; 算法日常学习
+LeetCode算法日常学习
