@@ -1,5 +1,16 @@
-public class LRU {
-    
+import java.util.HashMap;
+
+public class LRUCache {
+    HashMap<Integer, Node> map;
+
+
+
+}
+
+
+class DoubleLinkedList {
+    public Node head;
+    public Node tail;
 }
 
 
@@ -12,6 +23,5 @@ class Node {
     public Node(int key, int val) {
         this.key = key;
         this.val = val;
-        
     }
 }
