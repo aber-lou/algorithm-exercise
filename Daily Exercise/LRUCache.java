@@ -22,7 +22,7 @@ public class LRUCache {
         } else {
             if(map.size() == cap) {
                 int last = cache.deleteLast();
-                map.remove(key);
+                map.remove(last);
             }
             cache.addFrist(newNode);
             map.put(key,newNode);
