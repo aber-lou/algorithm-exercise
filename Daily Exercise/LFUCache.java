@@ -2,6 +2,15 @@ public class LFUCache {
 
 }
 
+class LinkedList {
+    Node head;
+    Node tail;
+
+    public LinkedList() {
+        this.head = new Node(0, 0, 100000);
+    }
+}
+
 class Node {
     int key;
     int val;
