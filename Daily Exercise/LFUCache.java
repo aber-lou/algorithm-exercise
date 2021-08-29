@@ -42,6 +42,43 @@ class LFUCache {
         return val;
     }
 
+    public void put(int key, int value) {
+        if (capacity == 0) {
+            return;
+        }
+
+        if(!key_table.containsKey(key)) {
+            if(key_table.size() == capacity)  {
+                Node node = freq_table.get(minfreq).peekFirst();
+                key_table.remove(node.key);
+                freq_table.remove(minfreq).pollLast();
+                if(freq_table.get(minfreq).size() == 0) {
+                    freq_table.remove(minfreq);
+                }
+            }
+
+            LinkedList<Node> list = freq_table.getOrDefault(1, new LinkedList<Node>());
+            list.offerFirst(new Node(key,value,1));
+            freq_table.put(1, list);
+            key_table.put(key, freq_table.get(1).peekFirst());
+            minfreq = 1;
+        } else {
+            Node node = key_table.get(key);
+            int freq = node.frequency;
+            freq_table.get(freq).remove(node);
+            if(freq_table.get(freq).size() == 0) {
+                freq_table.remove(freq);
+                if(minfreq == freq) {
+                    minfreq += 1;
+                }
+            }
+            LinkedList<Node> list = freq_table.getOrDefault(freq+1, new LinkedList<Node>());
+            list.offerFirst(new Node(key, value, freq+1));
+            freq_table.put(freq+1, list);
+            key_table.put(key, freq_table.get(freq+1).peekFirst());
+        }
+    }
+
 }
 
 class Node {
