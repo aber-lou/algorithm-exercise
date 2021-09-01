@@ -31,6 +31,7 @@ class LFUCache {
         freq_table.get(freq).remove(node);
         if(freq_table.get(freq).size() == 0) {
             freq_table.remove(freq);
+            
             if(minfreq == freq) {
                 minfreq += 1;
             }
