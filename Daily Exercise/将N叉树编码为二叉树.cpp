@@ -24,4 +24,22 @@ struct TreeNode
     TreeNode(int x): val(x), left(nullptr), right(nullptr){}
 };
 
+class Codec {
+    public:
+    
+    TreeNode* encode(Node* root) {
+        if(!root) {
+            return nullptr;
+        }
 
+        TreeNode *newRoot = new TreeNode(root->val);
+        TreeNode *cur = nullptr;
+
+        if (root->chil))
+        {
+            /* code */
+        }
+        
+
+    }
+}
