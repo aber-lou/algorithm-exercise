@@ -24,9 +24,12 @@ public class CoinChange {
         for(int coin : coins) {
             int subProblem = dp(coins, amount - coin);
 
-            if(subProblem == -1)
-        }
+            if(subProblem == -1) continue;
 
+            res = Math.min(res, subProblem + 1);
+        }
+        memo[amount] = res == Integer.MAX_VALUE ? -1 : res;
+        return memo[amount];
     }
 
 }
