@@ -1,9 +1,32 @@
-public class coinChange {
+import java.util.Arrays;
+
+public class CoinChange {
     
     int [] memo;
 
     public int coinChange(int[] coins, int amount) {
-        
+        memo = new int[amount + 1];
+
+        Arrays.fill(memo, -999);
+
+        return dp(coins, amount);
+    }
+
+    public int dp(int[] coins, int amount) {
+        if(amount == 0) return 0;
+        if(amount < 0) return -1;
+
+        if(memo[amount] != -999) {
+            return memo[amount];
+        }
+
+        int res = Integer.MAX_VALUE;
+        for(int coin : coins) {
+            int subProblem = dp(coins, amount - coin);
+
+            if(subProblem == -1)
+        }
+
     }
 
 }
