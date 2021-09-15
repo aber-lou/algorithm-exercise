@@ -29,7 +29,7 @@ public class CoinChange {
             res = Math.min(res, subProblem + 1);
         }
         memo[amount] = res == Integer.MAX_VALUE ? -1 : res;
-        return memo[amount];
+        return memo[amount]; 
     }
 
 }
