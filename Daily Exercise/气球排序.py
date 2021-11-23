@@ -32,17 +32,16 @@ class Solution:
             print(arr,i)
         return arr
 
+
     def bubbleSort(self,arr:List[int]) -> List[int]:
         l = len(arr) - 1
 
         for i in range(l):
             for j in range(0,l-i):
-                print(i,j)
                 if arr[j] > arr[j+1]:
                     tem = arr[j]
                     arr[j] = arr[j+1]
                     arr[j+1] = tem
-                print(arr)
         return arr
 
     def __init__(self) -> None:
