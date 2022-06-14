@@ -25,14 +25,17 @@ class PatternMatching  {
         return l2 == str2.length ? l1 - l2 : -1;  
     }
 
+    //  求解Next数组
     public static int[] NextSum(char[] ms) {
         if(ms.length == 1) {
             return new int[] { -1 };
         }
+        // Next数组默认填-1
         int [] next = new int[ms.length];
-        next[0] = -1;
+        next[0] = -1;   // Next 数组第一个值为-1
         next[1] = 0;
         int i = 2;
+        /// Next数组匹配值
         int cn = 0;
         while(i < next.length) {
             if( ms[i - 1] == ms[cn] ) {
