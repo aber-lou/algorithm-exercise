@@ -17,15 +17,17 @@ class LFUCache {
     }
 
     public int get(int key) {
-        if(capacity == 0) {
+        // 没有值，直接返回-1
+        if(capacity == 0) { 
             return -1;
         }
 
+        // 节点数组中没有值，也直接返回
         if(!key_table.containsKey(key)) {
             return -1;
         }
 
-
+        
         Node node = key_table.get(key);
         int val = node.val, freq = node.frequency;
         freq_table.get(freq).remove(node);
@@ -82,6 +84,7 @@ class LFUCache {
 
 }
 
+// 节点对象，包含Key，Val,当前节点出现的频率
 class Node {
     int key;
     int val;
