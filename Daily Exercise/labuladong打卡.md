@@ -15,4 +15,4 @@
 
 #### Day 14
 
-+验证搜索二叉树 https://leetcode.cn/problems/validate-binary-search-tree/solution/yan-zheng-er-cha-sou-suo-shu-by-aberfiel-7i4i/
++验证搜索二叉树 https://leetcode.cn/problems/validate-binary-search-tree/solution/yan-zheng-er-cha-sou-suo-shu-by-aberfiel-7i4i/nv
